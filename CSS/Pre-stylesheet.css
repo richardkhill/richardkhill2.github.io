@@ -1,0 +1,60 @@
+body{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1{ /*This changes the text written to the screen by changing its colour and font-size*/
+	text-align:center;
+	color:#d6d7d8;
+	font-size:20px;
+}
+
+a{ /*This is a button that when clicked on takes the user to the home screen*/
+	width:100px;
+	height: 30px;
+	text-align:center;
+}
+
+.button { /*These change the layout of the button*/
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	background-color: #c4c4c4;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 2px 32px;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius:5px;
+}
+
+
+@media only screen and (max-width: 600px){ /*This changes the content if the pixel width is less than 600px*/
+	.button{
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		background-color: #c4c4c4;
+		color: black;
+		font-weight: normal;
+		font-size: 12px;
+		padding: 0px 32px;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	a{ /*The button is made smaller, as it will be on a smaller screen*/
+		width:50px;
+		height:15px;
+		text-align:center;
+	}
+	
+	h1{ /*The text is made smaller as it's on a smaller screen*/
+		font-size:12px;
+	}
+}
+
+

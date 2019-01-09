@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mumford & Sons</title>
+
+<link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Martel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+
+<link rel="stylesheet" href="CSS/stylesheet.css">
+
+<script src="JS/Shoppingbasket.js"></script>
+<script http://code.jquery.com/jquery-1.6.1.min.js></script>
+<link rel="icon" type="image/ico" sizes="16x16" href="Assets/Favicon.ico">
+
+
+</head>
+<body id="backart">
+<h1 class="header">Mumford & Sons</h1>
+
+<aside class="asidesub">
+	<h3>Click to visit other pages:</h3>
+	<table id="menutable">
+		<tr>
+			<th>
+				<a href="home.html" class="button2"><span>Home</span></a>
+			</th>
+			<th>	
+				<a href="about.html" class="button2"><span>About</span></a>
+			</th>
+			<th>
+				<a href="music.html" class="button2"><span>Music</span></a>
+			</th>
+			<th>
+				<a href="live.html" class="button2"><span>Live</span></a>
+			</th>
+			<th>	
+				<a href="guessgame.html" class="button2"><span>Guess Game</span></a>
+			</th>
+			<th>	
+				<a href="playlist.html" class="button2"><span>Playlist Customizer</span></a>
+			</th>
+		</tr>
+	</table>
+</aside>
+
+<h5>.</h5>
+
+<table id="basket" cellpadding="4" cellspacing="4" border="1"> <!--Table is created so the user can view and add items to their basket-->
+    <tr>
+        <td valign="top">
+            <table cellpadding="4" cellspacing="4" border="0">
+                <thead>
+                    <tr>
+                        <td id="itemname" colspan="2">
+                            Products for sale
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> <!--List of the items for sale on the website-->
+                        <td id="itemname">
+                            T-Shirt
+							<img id="imagesize" src="Assets/tshirt.png">
+                        </td>
+                        <td>
+                            <input id="addtocartbutton" type="button" value="Add to cart" onclick="AddtoCart('T-Shirt','Official Mumford and Sons T-shirt',25)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="itemname">
+                            Hoodie
+							<img id="imagesize" src="Assets/hoodie.png">
+                        </td>
+                        <td>
+                            <input id="addtocartbutton" type="button" value="Add to cart" onclick="AddtoCart('Hoodie','Official Mumford and Sons Hoodie',30)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="itemname">
+                            Beanie
+							<img id="imagesize" src="Assets/beanie.png">
+                        </td>
+                        <td>
+                            <input id="addtocartbutton" type="button" value="Add to cart" onclick="AddtoCart('Beanie','Official Mumford and Sons Beanie',20)"/>
+                        </td>
+                    </tr>
+					<tr>
+                        <td id="itemname">
+                            Sigh No More CD
+							<img id="imagesize" src="Assets/sighnomore.jpg">
+                        </td>
+                        <td>
+                            <input id="addtocartbutton" type="button" value="Add to cart" onclick="AddtoCart('Sigh No More CD','Debut studio album by Mumford and Sons',10)"/>
+                        </td>
+                    </tr>
+					<tr>
+                        <td id="itemname">
+                            Babel CD
+							<img id="imagesize" src="Assets/babel.jpg">
+                        </td>
+                        <td>
+                            <input id="addtocartbutton" type="button" value="Add to cart" onclick="AddtoCart('Babel CD','Second studio album by Mumford and Sons',10)"/>
+                        </td>
+                    </tr>
+					<tr>
+                        <td id="itemname">
+                            Wilder Mind CD
+							<img id="imagesize" src="Assets/wildermind.jpg">
+                        </td>
+                        <td>
+                            <input id="addtocartbutton" type="button" value="Add to cart" onclick="AddtoCart('Wilder Mind CD','Third studio album by Mumford and Sons',10)"/>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </td>
+        <td valign="top">
+            <table cellpadding="4" cellspacing="4" border="1" id="orderedProductsTbl"> <!--Another table is created which holds the items the user has added to the basket-->
+                <thead>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            Price (£)
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="orderedProductsTblBody">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+						<td id="TP">Total Price: (£)</td>
+                        <td colspan="3" align="right" id="cart_total"> <!--The total price variable from the javascript file in displayed here-->
+                        </td>
+						<input id="addtocartbutton" type="button" value="Remove last item" onclick="Removelastitem()"/> <!--Clicking on this button will remove the last item in the array-->
+						<input id="addtocartbutton" type="button" value="Checkout"/> <!--Checkout button would go to payment page-->
+					</tr>
+                </tfoot>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<footer id="footer">
+	<p id="socialmedia">Check us out on social media!</p>
+	<div align="center">
+	<a href="https://en-gb.facebook.com/mumfordandsons/">
+		<img id="sm" src="Assets/facebook.png" alt="Check out our Facebook page" style="width:35px;height:35px;border:0">
+	</a>
+	<a href="https://twitter.com/MumfordAndSons?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+		<img id="sm" src="Assets/twitter.png" alt="Check out our Twitter page" style="width:35px;height:35px;border:0">
+	</a>
+	<a href="https://www.instagram.com/mumfordandsons/?hl=en">
+		<img id="sm" src="Assets/instagram.png" alt="Check out our Instagram page" style="width:35px;height:35px;border:0">
+	</a>
+	</div>
+</footer>
+
+</body>
+</html>
